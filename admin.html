@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusCare Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fas fa-shield-heart"></i>
+            CampusCare
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">
+                <i class="fas fa-home"></i> Student Portal
+            </a>
+
+            <span class="admin-label">
+                <i class="fas fa-user-shield"></i>
+                Admin Dashboard
+            </span>
+        </div>
+
+    </nav>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="admin-dashboard">
+
+        <div class="admin-header">
+
+            <div>
+                <h1>Admin Dashboard</h1>
+
+                <p>
+                    Monitor student feedback and take action.
+                </p>
+            </div>
+
+            <div class="admin-badge">
+                <i class="fas fa-user-shield"></i>
+                Administrator
+            </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <div class="admin-stats">
+
+            <div class="admin-stat-card">
+                <i class="fas fa-clipboard-list"></i>
+
+                <div>
+                    <span>Total Issues</span>
+                    <strong id="adminTotal">0</strong>
+                </div>
+            </div>
+
+
+            <div class="admin-stat-card">
+                <i class="fas fa-clock"></i>
+
+                <div>
+                    <span>Submitted</span>
+                    <strong id="adminSubmitted">0</strong>
+                </div>
+            </div>
+
+
+            <div class="admin-stat-card">
+                <i class="fas fa-spinner"></i>
+
+                <div>
+                    <span>In Progress</span>
+                    <strong id="adminProgress">0</strong>
+                </div>
+            </div>
+
+
+            <div class="admin-stat-card">
+                <i class="fas fa-check-circle"></i>
+
+                <div>
+                    <span>Resolved</span>
+                    <strong id="adminResolved">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <div class="admin-controls">
+
+            <input
+                type="text"
+                id="adminSearch"
+                placeholder="Search issues..."
+            >
+
+
+            <select id="adminCategory">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Hostel">
+                    Hostel
+                </option>
+
+                <option value="Mess">
+                    Mess
+                </option>
+
+                <option value="Maintenance">
+                    Maintenance
+                </option>
+
+            </select>
+
+
+            <select id="adminStatus">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="Submitted">
+                    Submitted
+                </option>
+
+                <option value="In Progress">
+                    In Progress
+                </option>
+
+                <option value="Resolved">
+                    Resolved
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ISSUES -->
+
+        <section class="admin-issues">
+
+            <div class="section-heading">
+
+                <h2>
+                    <i class="fas fa-list-check"></i>
+                    Student Issues
+                </h2>
+
+                <span id="issueCount">
+                    0 issues
+                </span>
+
+            </div>
+
+
+            <div id="adminIssueList">
+
+                <!-- Issues will appear here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
